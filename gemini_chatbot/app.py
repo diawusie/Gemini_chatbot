@@ -40,8 +40,8 @@ MODEL_NAME = "gemini-2.5-flash"
 # 2. UI Config
 # ---------------------------
 st.set_page_config(page_title="Kelvin's Gemini Chatbot", page_icon="🤖")
-st.title("🤖 Kelvin's Gemini Chatbot")
-st.write("Ask your PUIT AI Assistant anything (coding, ML, Android, datasets, etc.).")
+st.title("🤖 Gloria's Chatbot")
+st.write("Ask your AI Assistant anything (coding, ML, Android, datasets, etc.).")
 
 # ---------------------------
 # 3. Chat Memory
