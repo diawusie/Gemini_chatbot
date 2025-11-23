@@ -1,5 +1,5 @@
 import streamlit as st
-from google.genai import Client, types   # ✔ FIXED IMPORT
+from google.genai import Client, types  # ✔ Correct import
 
 # ---------------------------
 # 1. Configure API Key
@@ -40,6 +40,7 @@ if user_input:
     with st.chat_message("user"):
         st.markdown(user_input)
 
+    # Convert message format for Gemini
     gemini_history = [
         types.Content(role=msg["role"], parts=[types.Part.from_text(text=msg["content"])])
         for msg in st.session_state.messages
@@ -59,7 +60,9 @@ if user_input:
         st.markdown(reply)
         st.session_state.messages.append({"role": "assistant", "content": reply})
 
-# Button to clear
+# ---------------------------
+# 5. Button to Clear Chat
+# ---------------------------
 if st.button("Clear Chat"):
     st.session_state.messages = []
     st.rerun()
